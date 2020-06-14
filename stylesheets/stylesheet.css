@@ -105,7 +105,7 @@ figure {
 
 .aboutmecontent {
   text-align: center;
-  border-radius: 25px;
+  border-radius: 5px;
   margin: auto;
   max-width: 960px;
   min-width: 960px;
@@ -115,7 +115,7 @@ figure {
 
 .skillsscontent {
   text-align: center;
-  border-radius: 25px;
+  border-radius: 5px;
   margin: auto;
   max-width: 960px;
   min-width: 960px;
@@ -125,7 +125,7 @@ figure {
 
 .projectscontent {
   text-align: center;
-  border-radius: 25px;
+  border-radius: 5px;
   margin: auto;
   max-width: 960px;
   min-width: 960px;
@@ -135,7 +135,7 @@ figure {
 
 .bodycontent {
   text-align: center;
-  border-radius: 25px;
+  border-radius: 5px;
   margin: auto;
   max-width: 960px;
   min-width: 960px;
