@@ -1,0 +1,105 @@
+/* [1] The container */
+.img-hover-zoom {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+.img-hover-zoom-cubesat {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 229px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom-cubesat img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom-cubesat:hover img {
+  transform: scale(1.25);
+}
+
+.img-hover-zoom-sirius {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 297px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom-sirius img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom-sirius:hover img {
+  transform: scale(1.25);
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+.img-hover-zoom-uav {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 248px; /* [1.1] Set it as per your need */
+  margin-bottom: 15px;
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom-uav img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom-uav:hover img {
+  transform: scale(1.5);
+}
+
+.img-hover-zoom--point-zoom-uav {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 248px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* Point-zoom Container */
+.img-hover-zoom--point-zoom-uav img {
+  transform-origin: 99% 50%;
+  transition: transform 1s, filter .5s ease-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--point-zoom-uav:hover img {
+  transform: scale(2);
+}
+
+.img-hover-zoom--point-zoom-ip {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 317px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* Point-zoom Container */
+.img-hover-zoom--point-zoom-ip img {
+  transform-origin: 48% 50%;
+  transition: transform 1s, filter .5s ease-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--point-zoom-ip:hover img {
+  transform: scale(2.5);
+}

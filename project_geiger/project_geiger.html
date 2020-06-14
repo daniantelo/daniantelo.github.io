@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Webpage</title>
+    <link href="../stylesheets/stylesheet.css" rel="stylesheet">
+    <link href="../stylesheets/stylesheeteffects.css" rel="stylesheet">
+    <link href="../stylesheets/stylesheetnavbar.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <!--Master div-->
+
+    <div class="master">
+
+        <!--Navbar-->
+		
+		<ul class="nav">
+			<li class="header_list_separator">｜</li>
+			<li><a href="../index.html">Home</a></li>
+			<li class="header_list_separator">｜</li>
+			<li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">University Projects</a>
+                <div class="dropdown-content">
+                    <a href="../project_sirius/project_sirius.html">Sirius Bipropellant Rocket</a>
+                    <a href="../project_cubesat/project_cubesat.html">Scientific CubeSat Concept Study</a>
+                    <a href="../project_ir_radiometer/project_ir_radiometer.html">Miniaturised Infrared Radiometer</a>
+                    <a href="../project_uav/project_uav.html">Fixed Wing UAV</a>
+                </div>
+            </li>
+			<li class="header_list_separator">｜</li>
+			<li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Personal Projects, Guides & Tutorials</a>
+                <div class="dropdown-content">
+                    <a href="../project_geiger/project_geiger.html">Arduino Geiger-Müller Counter</a>
+					<a href="../project_g5_mod/project_g5_mod.html">Power Mac G5 ATX Mod</a>
+                </div>
+            </li>
+			<li class="header_list_separator">｜</li>
+		</ul>
+
+        <!--Header-->
+
+        <div class="headerwrapper">
+
+            <!--SpacerTop-->
+
+            <div class="spacertop"></div>
+
+            <!--SpacerBottom-->
+
+        </div>
+
+        <!--Header End-->
+
+        <!--Body-->
+
+        <div class="bodymain">
+            <div class="bodycontent">
+                <div class="titlecontent">
+                    <p class="aileron_project_title">Arduino Geiger-Müller Counter:</p>
+                </div>
+
+                <div class="row2">
+                    <div class="columnfill">
+                    </div>
+                    <div class="column3">
+						<p style="margin-bottom:5px;">I've always wanted to have my very own Geiger-Müller counter to test radioactive samples, but the price of profesional grade equipment is too high to justify the cost for a "toy". Instead, I decided to build it myself using readily available consumer parts.
+						The device only employs four parts: the Geiger-Müller tube driver circuit, the tube itself, the Arduino microcontroller, and a portable 5V USB battery.
+                        </p>
+                        <img width="50%" style="float:left; border-radius: 5px; margin-bottom: 5px; margin-right:25px; margin-top:10px;" src="geiger.jpeg" alt="image">
+                        <p class="section_title" style="font-size:28px; margin-bottom:10px;">Driver Circuit:</p>
+						<p style="margin-bottom: 5px;" >
+                        Geiger-Müller tubes work by applying a high voltage (between 300-600 Volts usually) between to electrodes on opposite ends of a sealed tube filled with an inert gas. When radiation collides with the tube, it briefly ionises the gas, creating a pulse-current between the electrodes.</p>
+						<p style="margin-bottom: 5px;">The driver circuit applies this high voltage and senses these pulses, converting them into signals. The circuit that I used is a readily available kit manufactured by RH Electronics. It can accomodate various types of GM tubes, and is able to output pulses conditioned for microcontrollers like an Arduino. It also features a built in buzzer attached to the output.</p>
+						<img width="55%" style="float:right; border-radius: 5px; margin-bottom: 15px; margin-left: 15px;" src="sbm20datasheet.gif">
+						<p class="section_title" style="font-size:28px; margin-bottom:10px;">Geiger-Müller Tube</p>
+                        <p style="margin-bottom:5px;">The tube employed is an SBM-20, produced in mass in the USSR during the Cold War. They are the quintesencial DIY GM counter tube, and are very robust and reliable, with good beta and gamma detection; Useless for alpha detection however. They are readily available online and are not expensive.
+						</p>
+						<p><img width="43%" style="float:left; border-radius: 5px; margin-bottom: 10px; margin-right:0px;" src="gmtubes.jpg"></p>
+						<p style="margin-bottom:5px;">The tests I've carried out have shown an average background of 23 CPM, which seems to correlate with the measurements shared by other users online. I haven't had the chance to test it with a highly source up to this date. The only radioactive sample that I've tried with it is a thoriated tungsten filament used for TIG welding. It has a very low Thorium content of only 2%, and it itself decays via alpha emission, so what the GM tube records is the beta emissions from its decay products, mainly Radon.
+                        </p>
+						
+						<p class="section_title" style="font-size:28px; margin-bottom:10px;">Arduino Assembly</p>
+                        <p style="margin-bottom:15px;">The Arduino Code employed so far is really simple. All it does is record the pulses by using interrupts. These pulses are counted for periods of one minute and then written onto a csv file that allows it to be post processed.
+						</p>
+						<p><img width="100%" style="float:left; border-radius: 5px; margin-bottom: 15px; margin-right:0px;" src="geigercounts.png"></p>
+						<p class="section_title" style="font-size:28px; margin-bottom:10px;">Future Plans</p>
+                        <p style="margin-bottom:40px;">The idea is to swap the Arduino for an Arduino Nano with data logging or a WEMOS D1 with WiFi and 3D print a case with a built in screen to make the device completely autonomous.
+						</p>
+                    </div>
+                    <div class="columnfill">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Body end-->
+
+        <!--Footer start-->
+
+        <div class="footer">
+            <p>© 2020 Daniel Antelo</p>
+        </div>
+
+        <!--Footer end-->
+
+    </div>
+
+    <!--Master end-->
