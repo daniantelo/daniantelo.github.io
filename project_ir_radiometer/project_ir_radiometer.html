@@ -95,7 +95,7 @@
                         <p style="margin-bottom:5px;">
                             The instrument concept is composed of one micromirror, one calibration target, and two thermopiles. The disposition devised allows both sensors to measure their respective fluxes at the same time. The micromirror, in the idle position, reflects the signal from each light guide into its respective sensor, while the calibration signal is reflected back into its source. To calibrate a detector, the mirror tilts, and the calibration target signal is aligned with the detector. Both zenith and nadir rays are placed in such a way that they exit through the opposing side during the calibration of both sensors.
                         </p>
-                        <img height="414px" style="float:left; border-radius: 5px; margin-bottom: 5px; margin-right:15px;" src="calibrateL.png" alt="image">
+                        <img height="414px" style="float:left; border-radius: 5px; margin-bottom: 5px; margin-right:15px;" src="CalibrateL.png" alt="image">
                         <img height="414px" style="border-radius: 5px; margin-bottom: 5px;" src="measuring.png" alt="image">
                         <img height="414px" style="float:right; border-radius: 5px; margin-bottom: 5px; margin-left:15px;" src="calibrateR.png" alt="image">
                         <p class="underline" style="font-size:28px; margin-bottom:10px;">3. Micromirror Coating:</p>
@@ -140,7 +140,7 @@
 						<p style="margin-bottom:5px;">
 						A PCB to support the XTR111 IC and the other required components was designed on EasyEDA according to the guidelines provided in the device datasheet and fabricated at the university's electronics workshop. Testing was performed to ensure the circuit operated as expected. The output current was measured over the whole range of input voltages (0 - 5 V). These measurements correlated the expected transfer function.
 						</p>
-						<img width="100%" style="float:left; border-radius: 5px; margin-bottom: 15px; margin-right:15px;" src="XTR111_pcb_drawing.png" alt="image">
+						<img width="100%" style="float:left; border-radius: 5px; margin-bottom: 15px; margin-right:15px;" src="XTR111_PCB_Drawing.png" alt="image">
 						<p style="margin-bottom:15px;">
 						The circuit was tested to confirm that it operated as expected. The output current was measured over the whole range of input voltages (0 - 5 V). These measurements confirmed the expected transfer function of 3mA per volt.
 						</p>
@@ -149,7 +149,7 @@
 						<p style="margin-bottom:15px;">
 						The second element of the micromirror driver was a circuit capable of reverting the polarity of the voltage across the mirror's coil, allowing it to tilt in both directions. “H − Bridges” are commonly used in order to reverse the spin of the DC motors. They are composed of four switches, usually solid state gates, arranged in a way that depending on the state of each switch, allow the current to flow through the load in one or another direction.
 						</p>
-						<img width="100%" style="float:right; border-radius: 5px; margin-bottom: 15px; margin-left:15px;" src="H_bridge.png" alt="image">
+						<img width="100%" style="float:right; border-radius: 5px; margin-bottom: 15px; margin-left:15px;" src="H_Bridge.png" alt="image">
                         <p style="margin-bottom:15px;">
                         One such device is the DRV8838 Low-Voltage H-Bridge from Texas Instruments, with a design load voltage range of 0 to 11 V. The direction of the current flow between the pins "OUT1" and "OUT2" depends on whether the inputs "PH" and "EN" are pulled LOW (0V) or HIGH (5V). Another PCB was designed in EasyEDA to support it and its I/O connections. This circuit board was also printed at the university's electronics workshop.
                         </p>
@@ -168,7 +168,7 @@
 						The MEMS device had to be soldered onto a PCB to connect it to the rest of the circuit. Another circuit board was designed and manufactured for this purpose. The soldering of the MEMS device had to be done under very specific conditions, below 260ºC, and for no more than 10 seconds at a time. The permanent magnet inside the device complicated the soldering process, since It’d stick onto the tools employed. To circumvent this, the PCB with the mirror unsoldered on top were placed on top a big slab of iron, which magnetically held the mirror in place while it was soldered.
 						</p>
 						<img width="47%" style="float:left; border-radius: 5px; margin-bottom: 10px; margin-right:15px;" src="MirrorPCB.png" alt="image">
-						<img width="49.5%" style="float:right; border-radius: 5px; margin-bottom: 15px; margin-left:15px;" src="AssembledMirrorPCB.png" alt="image">
+						<img width="49.5%" style="float:right; border-radius: 5px; margin-bottom: 15px; margin-left:15px;" src="assembledMirrorPCB.png" alt="image">
 						<p class="underline" style="font-size:24px; margin-bottom:10px;">4.5 Microcontroller:</p>
 						<p style="margin-bottom:5px;">
 						The final piece of the system is the microcontroller. An Arduino Uno was chosen due to familiarity with the device and the code, but other devices such as a Raspberry Pi could have been similarly employed. The microcontroller accomplishes three tasks:
