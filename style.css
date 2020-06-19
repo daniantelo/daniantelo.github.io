@@ -1,0 +1,176 @@
+/* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900); */
+body {
+  background-color: #141414;
+/*
+    background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
+*/
+    background-image: url("./images/sky3.jpg");
+    margin:0; padding:0;
+    overflow-x:hidden;
+    height:100%;
+    font-family: 'Lato', Helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #eee;
+    color: rgba(255,255,255,.85);
+}
+#container { 
+    padding-top: 50px;
+}
+#content {
+    max-width: 43em;
+    padding:10px;
+    margin: 0 auto;
+
+}
+h1 {
+    font-size: 2.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+p, li {
+    font-size: 1.7em;
+    text-align: justify;
+}
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: underline;
+}
+p#pleft {
+    max-width:20em;
+    float:left;
+}
+p#pright {
+    max-width:20em;
+    float:left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+li {
+    float: left;
+    width: 20%;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.subhead {
+text-align: justify;
+font-size: 1.2em;
+}
+
+.project_title {
+    text-align: center;
+}
+
+html { font-size: 70%; }
+body { font-size: 1em;}
+
+.stage {
+  float:right;
+  margin-right:0px;
+  margin-top:0px;
+  width:0px; height:0px;
+  
+  position:relative;  
+}
+
+.footer img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.img_left, .img_right, .img_right_profile{
+	min-height: 300px;
+	text-align: left;
+}
+
+.img_right img  {
+    float: right;
+    max-width: 100%;
+    margin-left: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.img_left img {
+    float: left;
+    max-width: 100%;
+    margin-right: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.column {
+    float: left;
+    width: 20%;
+  }
+  
+  /* Clear floats after the columns */
+  .contact:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@media (max-width: 300px) {
+    html { font-size: 100%; }
+    .img_left img {max-width: 100%; max-height: 100%;}
+    .img_right img {max-width: 100%; max-height: 100%;}
+}
+@media (max-width: 440px) {
+    h1 { line-height:55px; } 
+    .img_left img {max-width: 100%; max-height: 100%;}
+    .img_right img {max-width: 100%; max-height: 100%;}  
+}
+@media (max-width: 460px) { 
+  h1 { margin-top:50px; text-align:center; }
+  .img_left img {max-width: 100%; max-height: 100%;}
+  .img_right img {max-width: 100%; max-height: 100%;}
+}
+
+@media (min-width: 880px) {
+    html { font-size: 120%; }
+    p, li { font-size: 1em; }
+    p#pright { margin-left:3em; }
+    .img_left img {max-width: 500px; max-height: 350px;}
+    .img_right img {max-width: 500px; max-height: 350px;}
+}
