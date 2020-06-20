@@ -5,6 +5,7 @@ body {
     background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
 */
     background-image: url("./images/sky3.jpg");
+    background-size:     cover;                      /* <------ */
     margin:0; padding:0;
     overflow-x:hidden;
     height:100%;
@@ -22,14 +23,21 @@ body {
     max-width: 43em;
     padding:10px;
     margin: 0 auto;
+}
+
+#menu {
+    max-width: 43em;
+    margin: 0 auto;
 
 }
+
 h1 {
     font-size: 2.2em;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     margin: 0;
+    margin-top:25px;
 }
 
 h2 {
@@ -82,6 +90,21 @@ li a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
+}
+
+ul#header {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+li#header {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+    width: 100%;
 }
 
 .subhead {
@@ -162,7 +185,7 @@ body { font-size: 1em;}
     .img_right img {max-width: 100%; max-height: 100%;}  
 }
 @media (max-width: 460px) { 
-  h1 { margin-top:50px; text-align:center; }
+  h1 { margin-top:25px; text-align:center; }
   .img_left img {max-width: 100%; max-height: 100%;}
   .img_right img {max-width: 100%; max-height: 100%;}
 }
