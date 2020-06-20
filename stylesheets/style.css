@@ -1,7 +1,7 @@
 /* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900); */
 body {
     background-color: #141414;
-    background-image: url("./images/sky3.jpg");
+    background-image: url("../images/sky3.jpg");
     background-size:     cover;
     background-position:center top;
     margin:0; padding:0;
@@ -182,11 +182,15 @@ body { font-size: 1em;}
     text-justify: inter-word;
 }
 
-@media (max-width: 560px) { 
+@media (max-width: 720px) { 
   h1 { margin-top:25px; text-align:center;}
   .img_left img {max-width: 100%; max-height: 100%;}
   .img_right img {max-width: 100%; max-height: 100%;}
   .center_footer{width:150%;}
+  .web_title {
+    text-align: center;
+    font-size: 3.5em;
+}
 }
 
 @media (min-width: 1080px) {
