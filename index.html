@@ -1,99 +1,148 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Daniel Antelo</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'><link rel="stylesheet" href="./style.css">
 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Daniel Antelo</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet'>
+	<link href="./style.css" rel="stylesheet">
 </head>
+
 <body>
 	<nav>
-		<h1 id="title">Daniel Antelo Roldán</h1>
 		<div id="menu">
 			<ul id="header">
-				<li id="header"><a href="#about">About me</a></li>
-				<li id="header"><a href="#projects">Projects</a></li>
-				<li id="header"><a href="#contact">Contact</a></li>
+				<li id="header">
+					<a href="#about">About me</a>
+				</li>
+
+
+				<li id="header">
+					<a href="#projects">Projects</a>
+				</li>
+
+
+				<li id="header">
+					<a href="#contact">Contact</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
-<!-- partial:index.partial.html -->
-<div id="container">
-  <div id="content">
-    <div id="about">
-        <div style="margin-bottom:60px;">
-          <img style="border-radius: 50%" src="./images/profilepicture.png" width="200" class="center">
-        </div>
-      <h1>
-      Welcome to my personal website!
-      </h1>
-      <h3 style='clear:both'; class="subhead">
-      <p>My name is Daniel. I am a 4th year MEng Spacecraft Engineering Student. Spaceflight has always captured my imagination, and I have developed a passion for it, which is why I chose to become an aerospace engineer.</p>
-      <p>I am an ambitious and self-motivated person, driven by curiosity. My career goal is to join the space industry and become a propulsion engineer.</p>
-      <p>I will use this website to showcase and share projects alongside other things. (This site is a constant work in progress!)</p>
+
+
+	<div id="container">
+	<div id="content">
+		<div id="about">
+			<div class="img_right_profile">
+				<h2 class="project_title">Daniel Antelo Roldán</h2>
+				<img alt="Dani" src="./images/profilepicture.png" style="border-radius: 50%" class="center">
+
+				<h3 class="subhead">
+
+				<p>My name is Daniel. I am a 4th year MEng Spacecraft Engineering Student. Spaceflight has always captured my imagination, and I have developed a passion for it, which is why I chose to become an aerospace engineer.</p>
+
+
+				<p>I am an ambitious and self-motivated person, driven by curiosity. My career goal is to join the space industry and become a propulsion engineer.</p>
+
+
+        
       </h3>
+			</div>
 
-      <div id="projects">
-      <h1>
-      Projects
-      </h1>
-    </div>
 
-      <div class="img_right">
-        <h2 class="project_title">Sirius Bipropellant Rocket Engine</h2>
-        <img style="border-radius: 5px" src="./images/sirius.jpg" alt="Sirius">
-        <p>Project Sirius is a student led project that aims to design and build a cost-effective, three stage rocket to launch small satellites into low Earth orbit from a UK based spaceport.
-        </p>
-        
-        <p>The current stage of the project involves the design, manufacture and testing of a 1.5kN regeneratively cooled 3D printed liquid fuel engine. The project aims to serve as a testbed to develop a new generation of “green” propellant rocket propulsion.
-        </p>
-      </div>
+			<div id="projects">
+        <h1>Projects</h1>
 
-      <div class="img_left">
-        <h2 class="project_title">Scientific CubeSat Concept Study</h2>
-        <img style="border-radius: 5px" src="./images/cubesatcut.png" alt="CubeSat">
-        <p>This project consisted in the conceptual design of a 2U CubeSat mission aimed at measuring the concentration of CO2 in the thermosphere. The development was carried out following a concurrent design approach.</p>
-        
-        <p>The proposed spacecraft is also a technology demonstrator for the use of deployable solar arrays for passive attitude bias, SLS 3D printing for the primary structure and shape memory alloys in deployment mechanisms.
-        </p>
-      </div>
+        <h3 class="subhead">
+        <p>I will use this website to showcase and share projects alongside other things. Click on "PROJECTS" to see the full list (This site is a constant work in progress!).</p>
+        </h3>
 
-      <div class="img_right">
-        <h2 class="project_title">Miniaturised Infrared Radiometer</h2>
-        <img style="border-radius: 5px" src="./images/radiometer.png" alt="Radiometer">
-        <p>This project involved the design of a scientific instrument: a miniaturized infrared (IR) radiometer designed to measure net thermal radiative flux inside Venus' atmosphere. 
-        </p>
-        <p>This instrument has a minimal number of components: a thermopile sensor, a calibration source, and a MEMS light switch. The MEMS device can either reflect external atmospheric light into the sensor, or steer radiation from the calibration target into the sensor. Providing in-situ reference readings to calibrate the mirror while it descends through the atmosphere, correcting any measurement drifts.</p>
-      </div>
+				<div class="img_right">
+					<h2 class="project_title">Sirius Bipropellant Rocket Engine</h2>
+					<img alt="Sirius" src="./images/sirius.jpg" style="border-radius: 5px">
 
-      <div class="img_left">
-        <h2 class="project_title">Fixed Wing UAV</h2>
-        <img style="border-radius: 5px" src="./images/uav2.jpeg" alt="UAV">
-        <p>This project comprised the design, manufacture and testing of a 1.8 m wingspan UAV. We had to face the challenges involved when dealing with tight mass, volume, time and cost budgets.</p>
-        <p>We were able to design and build a machine that can fly beautifully while recording lots of telemetry & payload data to serve very different missions.</p>
-      </div>
+					<p>Project Sirius is a student led project that aims to design and build a cost-effective, three stage rocket to launch small satellites into low Earth orbit from a UK based spaceport.</p>
 
-      <div id="contact">
-        <h1>
-        Contact
-        </h1>
-        <ul>
-          <li style="width: 30%;"><a href=""></a></li>
-          <li><a href="https://www.linkedin.com/in/danielantelo/"><img src="./images/linked.png" alt="LinkedIn" style="width: 40%; min-width: 50px;"></a></li>
-          <li style="width: 0%;"><a href=""></a></li>
-          <li><a href="mailto:dar1u16@soton.ac.uk"><img src="./images/emailicon.png" alt="LinkedIn" style="width: 50%; min-width: 70px;"></a></li>
-          <li><a href=""></a></li>
-        </ul>
-      </div>
-    <div>
-      <center>
-      © 2020 Daniel Antelo
-      </center>
-    </div>
+
+					<p>The current stage of the project involves the design, manufacture and testing of a 1.5kN regeneratively cooled 3D printed liquid fuel engine. The project aims to serve as a testbed to develop a new generation of “green” propellant rocket propulsion.</p>
+				</div>
+
+
+				<div class="img_left">
+					<h2 class="project_title">Scientific CubeSat Concept Study</h2>
+					<img alt="CubeSat" src="./images/cubesatcut.png" style="border-radius: 5px">
+
+					<p>This project consisted in the conceptual design of a 2U CubeSat mission aimed at measuring the concentration of CO2 in the thermosphere. The development was carried out following a concurrent design approach.</p>
+
+
+					<p>The proposed spacecraft is also a technology demonstrator for the use of deployable solar arrays for passive attitude bias, SLS 3D printing for the primary structure and shape memory alloys in deployment mechanisms.</p>
+				</div>
+
+
+				<div class="img_right">
+					<h2 class="project_title">Miniaturised Infrared Radiometer</h2>
+					<img alt="Radiometer" src="./images/radiometer.png" style="border-radius: 5px">
+
+					<p>This project involved the design of a scientific instrument: a miniaturized infrared (IR) radiometer designed to measure net thermal radiative flux inside Venus' atmosphere.</p>
+
+
+					<p>This instrument has a minimal number of components: a thermopile sensor, a calibration source, and a MEMS light switch. The MEMS device can either reflect external atmospheric light into the sensor, or steer radiation from the calibration target into the sensor. Providing in-situ reference readings to calibrate the mirror while it descends through the atmosphere, correcting any measurement drifts.</p>
+				</div>
+
+
+				<div class="img_left">
+					<h2 class="project_title">Fixed Wing UAV</h2>
+					<img alt="UAV" src="./images/uav2.jpeg" style="border-radius: 5px">
+
+					<p>This project comprised the design, manufacture and testing of a 1.8 m wingspan UAV. We had to face the challenges involved when dealing with tight mass, volume, time and cost budgets.</p>
+
+
+					<p>We were able to design and build a machine that can fly beautifully while recording lots of telemetry & payload data to serve very different missions.</p>
+				</div>
+			</div>
+
+
+			<div id="contact">
+				<h1>Contact</h1>
+
+
+				<ul>
+					<li style="width: 30%;">
+						<a href=""></a>
+					</li>
+
+
+					<li>
+						<a href="https://www.linkedin.com/in/danielantelo/"><img alt="LinkedIn" src="./images/linked.png" style="width: 40%; min-width: 50px;"></a>
+					</li>
+
+
+					<li style="width: 0%;">
+						<a href=""></a>
+					</li>
+
+
+					<li>
+						<a href="mailto:dar1u16@soton.ac.uk"><img alt="LinkedIn" src="./images/emailicon.png" style="width: 50%; min-width: 70px;"></a>
+					</li>
+
+
+					<li>
+						<a href=""></a>
+					</li>
+				</ul>
+			</div>
+
+
+			<div>
+				<center>
+					© 2020 Daniel Antelo
+				</center>
+			</div>
+		</div>
   </div>
-</div>
-  <img style="position:absolute; width:100%" src="./images/footerv3bocata.png"/>
-
+  <img src="./images/footerv3bocata.png" class="center_footer">
+	</div>
 </body>
-
 </html>
