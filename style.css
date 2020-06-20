@@ -112,6 +112,12 @@ font-size: 1.2em;
     text-align: center;
 }
 
+.web_title {
+    text-align: center;
+    font-size: 6.5em;
+    line-height: 0.5;
+}
+
 html { font-size: 70%; }
 body { font-size: 1em;}
 
@@ -193,6 +199,10 @@ body { font-size: 1em;}
         max-width: 43em;
         padding:10px;
         margin: 0 auto;
+    }
+    .web_title {
+        text-align: center;
+        font-size: 4.5em;
     }
     
 }
