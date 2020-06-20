@@ -178,7 +178,7 @@ body { font-size: 1em;}
   .center_footer{width:150%;}
 }
 
-@media (min-width: 880px) {
+@media (min-width: 1080px) {
     html { font-size: 120%; }
     p, li { font-size: 1em; }
     p#pright { margin-left:3em; }
