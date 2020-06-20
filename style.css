@@ -17,13 +17,13 @@ body {
     padding-top: 0px;
 }
 #content {
-    max-width: 43em;
+    max-width: 75em;
     padding:10px;
     margin: 0 auto;
 }
 
 #menu {
-    max-width: 43em;
+    max-width: 75em;
     margin: 0 auto;
 }
 
@@ -185,4 +185,14 @@ body { font-size: 1em;}
     .img_left img {max-width: 500px; max-height: 350px;}
     .img_right img {max-width: 500px; max-height: 350px;}
     .center {float: right; width: 300px; padding-left: 20px;}
+    #menu {
+        max-width: 43em;
+        margin: 0 auto;
+    }
+    #content {
+        max-width: 43em;
+        padding:10px;
+        margin: 0 auto;
+    }
+    
 }
