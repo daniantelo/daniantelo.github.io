@@ -3,6 +3,7 @@ body {
     background-color: #141414;
     background-image: url("./images/sky3.jpg");
     background-size:     cover;
+    background-position:center top;
     margin:0; padding:0;
     overflow-x:hidden;
     height:100%;
@@ -101,6 +102,10 @@ li#header {
     flex: 0 1 auto; /* Default */
     list-style-type: none;
     width: 100%;
+}
+
+#header {
+    font-size: 1.5em;
 }
 
 .subhead {
