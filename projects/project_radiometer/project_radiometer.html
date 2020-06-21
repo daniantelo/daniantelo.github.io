@@ -26,11 +26,29 @@
 
 					<p>This project involved the design of a scientific instrument: a miniaturized infrared (IR) radiometer designed to measure net thermal radiative flux inside Venus' atmosphere.</p>
 
+					<p>The change of net IR flux with altitude is equal to the IR cooling or heating at that altitude. This is directly related to atmospheric energy budgets and atmospheric energy transport. To measure this, the instrument must record the thermal radiative fluxes in both the upwards and downwards direction.</p>
 
 					<p>This instrument has a minimal number of components: a thermopile sensor, a calibration source, and a MEMS light switch. The MEMS device can either reflect external atmospheric light into the sensor, or steer radiation from the calibration target into the sensor. Providing in-situ reference readings to calibrate the mirror while it descends through the atmosphere, correcting any measurement drifts.</p>
 				</div>
 
-				<p><strong>THIS PAGE IS A WORK IN PROGRESS</strong></p>
+				<p>This project was my third year individual project (commonly referred to as "IP"). It provided me with an exciting and challenging opportunity to learn about the design of spacecraft scientific instrumentation, the potential of miniaturising existing components with the use of MEMS, and the challenges present when operating them in extreme environments. It concentrated on the light switch, developing a working prototype suitable to be used in follow up student projects that further develop the instrument.</p>
+			
+				<p>The mechanical deflection angle of the mirror is linearly proportional to the current that flows through the coil. It was therefore necessary to create a controller that was able to supply the required range of current values to reliably tilt the mirror in both directions. The micromirror driver circuit that I designed and built for this purpose is composed of eight separate components:</p>
+
+				<p>-MEMS Mirror: Has a linear coil current / deflection relationship</p>
+				<p>-XTR111: Constant current source IC to drive the micromirror. Follows a linear input voltage / output current relationship.</p>
+				<p>-DRV8838: H-Bridge IC to switch the direction of the micromirror's titl angle.</p>
+				<p>-MCP4725: Digital to analog converter. Allows the microcontroller (digital output) to drive the XTR111 (analog input). </p>
+				<p>-Arduino UNO: Issues the commands to tilt the mirror to a given deflection angle and direction.</p>
+				<p>-9V Power Supply: Powers the microcontroller as well as the XTR111, which in turn power the rest of the circuit.</p>
+				<p>-INA219 (2): Current meters to monitor the status of the circuit.</p>
+			
+				<img alt="Radiometer" src="../../images/block_diagram.png" style="border-radius: 5px; width:100%;">
+
+				A plastic circuit board was designed, manufactured and assembled for each of the individual integrated circuits, while the rest of the components were breadborded:
+
+				<img alt="Radiometer" src="../../images/circuit_frame.png" style="border-radius: 5px; width:100%;">
+			
 			</div>
 
 			<center>

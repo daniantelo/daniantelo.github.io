@@ -19,17 +19,47 @@
 			<a href="../../index.html">Click here to return to the frontpage!</a>
 		</center>
 				</div>
-
 				<div class="img_left">
-					<h2 class="project_title">Fixed Wing UAV</h2>
-					<img alt="UAV" src="../../images/uav2.jpeg" style="border-radius: 5px">
+				<h2 class="project_title">Fixed Wing UAV</h2>
+				<img alt="UAV" src="../../images/uav2.jpeg" style="border-radius: 5px; width:100%;">
+				
 
-					<p>This project comprised the design, manufacture and testing of a 1.8 m wingspan UAV. We had to face the challenges involved when dealing with tight mass, volume, time and cost budgets.</p>
 
-
-					<p>We were able to design and build a machine that can fly beautifully while recording lots of telemetry & payload data to serve very different missions.</p>
+					<p>This project comprised the design, manufacture and testing of a 1.8 m wingspan UAV. The team had to design, build and test the main wing, as well as the onboard electronics and data logging system from scratch. We only started with an empty fuselage and the tail.</p>
+						
+					<p>The project rules set specific constraints regarding aircraft weight and size. This project provided us with very valuable experience about the challenges faced by aerospace engineers when dealing with tight mass, volume, time and cost budgets.</p>	
 				</div>
-				<p><strong>THIS PAGE IS A WORK IN PROGRESS</strong></p>
+					<p>My responsibilities within the project consisted in the design and manufacture of the wing, assuming leadership during the manufacturing and testing phase of the project. I also edited the final project report.</p>
+
+				<div class="img_right">
+
+					<img alt="UAV" src="../../images/wing_cad.png" style="border-radius: 5px;">
+
+
+					<p>The design of the wing started with several concept sketches devised by the team members. The final candidate was selected based on its manufacturing feasibility and aerodynamic performance. The final shape of the airfoil and wing were selected based on analysis and optimisation performed on XFLR5. This geometry was then translated into a detailed CAD assembly which was used to study the structural properties of the wing with FEA simulations.</p>
+				
+				</div>
+				<div class="img_right">
+					<img alt="UAV" src="../../images/uav_wing.jpg" style="border-radius: 5px;">
+					<p>The final design of the wing was comprised of six main styrofoam sections, six plywood ribs, four deployable aerodynamic surfaces (two ailerons and two flaps featuring a slotted flap design) and four woven carbon fibre tubes acting as load bearing spars. The entire wing was covered with a mylar fibre skin which produced a very resistant skin which helped to strenghten and stiffen the wing.</p>
+
+					<p>To deploy the slotted flaps, a hinge mechanism was designed, tested, and fitted onto both aerodynamic surfaces. The hinge ultimate strenght was assesed with destructive tests, which showed that the wing would break before the hinge itself.</p>
+
+					<p>Before final assembly of the wing onto the fuselage, an static loading test was carried out in which its stiffness was assesed. During the test, weight was added progressively at the wingtip and its deflection was measured. The test required the wing to reach a high tip deflection without catastrophic failure in order to ensure its airworthiness.</p>
+
+
+				</div>
+
+				<p>The onboard electronics were centered around an Arduino MEGA microcontroller, which processed the inputs from the radio controller and delivered them to the servos and the ducted fan propulsion system. The system also included a wide variety of sensors to provide telemetry data: barometer, 3-axis gyroscope, 3-axis magnetometer, 3-axis acceleromter and a GPS receiver. This data was logged onto an onboard SD card for post-flight analysis. The onboard computer also featured a PID control loop autopilot function which was designed to hold the airplane attitude without pilot input.</p>
+
+				<img alt="UAV" src="../../images/uav_board.jpg" style="border-radius: 5px; width:100%;">
+
+				<p>The final test of the UAV system consisted in a test flight in which all its features were tested in depth. The aircraft proved able to maintain stable flight with minimal control inputs, while also retaining considerable maneuvrability. The test took place in gusty flight conditions (up to 11 m/s) demonstrating that the stability margins applied had been computed correctly:</p>
+
+				<div id="video">
+					<iframe width="100%" height="490px" src="https://www.youtube.com/embed/b1ZAhEnqdw0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
 			</div>
 
 			<center>
