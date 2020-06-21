@@ -109,7 +109,7 @@ li#header {
 }
 
 #header {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .subhead {
@@ -209,6 +209,9 @@ body { font-size: 1em;}
     .web_title {
         text-align: center;
         font-size: 4.5em;
+    }
+    #header {
+        font-size: 1.2em;
     }
     
 }
