@@ -1,0 +1,232 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/base_layout.astro";
+
+
+export async function getStaticPaths() {
+
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+
+    params: {
+      slug: project.id,
+    },
+
+    props: {
+      project,
+    },
+
+  }));
+
+}
+
+
+const { project } = Astro.props;
+
+const { Content } = await render(project);
+
+const years =
+  project.data.start === project.data.end
+    ? `${project.data.start}`
+    : `${project.data.start} – ${project.data.end}`;
+
+---
+
+
+<BaseLayout title={project.data.title}>
+
+
+<section class="project_page repository-card">
+
+
+  <div class="card-header">
+
+  {project.data.title}
+
+  </div>
+
+
+
+  <div class="card-content">
+
+    <div class="metadata">
+
+    <span class="tag">{years}</span>
+
+    <span class="tag">{project.data.category}</span>
+
+    </div>
+
+    <figure class="hero">
+
+  <img
+    class="hero_image lightbox-trigger"
+    src={project.data.image}
+    alt={project.data.title}
+    loading="lazy"
+  />
+
+  <figcaption>
+    {project.data.description}
+  </figcaption>
+
+</figure>
+
+
+
+
+    <Content />
+
+
+  </div>
+
+
+</section>
+
+<div class="lightbox" id="lightbox">
+
+  <img id="lightbox-image" src="" alt="">
+
+</div>
+
+</BaseLayout>
+
+
+<style>
+
+.metadata {
+
+  display: flex;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+  color: var(--secondary);
+
+  font-size: 14px;
+
+  margin-bottom: 30px;
+
+}
+
+
+.description {
+
+  font-size: 18px;
+
+  margin-bottom: 40px;
+
+}
+
+
+hr {
+
+  margin: 50px 0;
+
+}
+
+.lightbox {
+
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,0.85);
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1000;
+
+  padding: 40px;
+
+}
+
+.lightbox img {
+
+  max-width: 95%;
+
+  max-height: 95%;
+
+  object-fit: contain;
+
+  cursor: zoom-out;
+
+}
+
+.lightbox.active {
+
+  display: flex;
+
+}
+
+.project-figure img.lightbox-trigger {
+  cursor: zoom-in !important;
+  outline: 5px solid red;
+}
+
+@media(max-width:768px){
+
+  .metadata {
+
+    flex-direction: column;
+
+    gap: 10px;
+
+  }
+
+}
+
+</style>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const images = document.querySelectorAll(".lightbox-trigger");
+
+    const lightbox = document.querySelector("#lightbox");
+
+    const lightboxImage = document.querySelector("#lightbox-image");
+
+
+    images.forEach((image) => {
+
+      image.addEventListener("click", () => {
+
+        lightboxImage.src = image.src;
+
+        lightboxImage.alt = image.alt;
+
+        lightbox.classList.add("active");
+
+      });
+
+    });
+
+
+    lightbox.addEventListener("click", () => {
+
+      lightbox.classList.remove("active");
+
+    });
+
+
+    document.addEventListener("keydown", (event) => {
+
+      if (event.key === "Escape") {
+
+        lightbox.classList.remove("active");
+
+      }
+
+    });
+
+  });
+
+</script>

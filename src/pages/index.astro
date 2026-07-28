@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../layouts/base_layout.astro";
+import { getCollection } from "astro:content";
+
+/* Change only this line to select the featured project */
+const featuredProject = "sirius";
+
+const projects = await getCollection("projects");
+
+const featured = projects.find(
+  (project) => project.id === featuredProject
+);
+---
+
+<BaseLayout title="Daniel Antelo">
+
+  <section class="repository-card">
+
+    <div class="card-header">
+      Introduction
+    </div>
+
+    <div class="card-content">
+
+      <p class="greeting">
+        Hi!
+      </p>
+
+      <p>
+        My name is Daniel, and this website is an archive of some of my academic and personal projects.
+      </p>
+
+      <p>
+        You can browse the full <a href="/projects/project_archive">project archive</a> or learn more about my background on my <a href="https://www.linkedin.com/in/danielantelo/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>.
+      </p>
+      
+
+    </div>
+
+  </section>
+
+  {featured && (
+
+    <section class="repository-card">
+
+      <div class="card-header">
+        Featured Project
+      </div>
+
+      <div class="card-content">
+
+        <div class="project">
+
+          <a href={`/projects/${featured.id}`}>
+
+            <img
+              src={featured.data.image}
+              alt={featured.data.title}
+            />
+
+          </a>
+
+          <div class="project_info">
+
+            <h3>
+
+              <a href={`/projects/${featured.id}`}>
+                {featured.data.title}
+              </a>
+
+            </h3>
+
+            <div class="metadata">
+
+              <span class="tag">
+
+                {featured.data.start === featured.data.end
+                  ? featured.data.start
+                  : `${featured.data.start} – ${featured.data.end}`}
+
+              </span>
+
+              <span class="tag">
+
+                {featured.data.category}
+
+              </span>
+
+            </div>
+
+            <p>
+
+              {featured.data.description}
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  )}
+
+</BaseLayout>

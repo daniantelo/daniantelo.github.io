@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/base_layout.astro";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => b.data.end - a.data.end
+);
+---
+
+<BaseLayout title="Projects">
+
+  <section class="repository-card">
+
+    <div class="card-header">
+      Projects
+    </div>
+
+    <div class="card-content">
+
+      {
+        projects.map((project) => (
+          <div class="project">
+
+            <a href={`/projects/${project.id}`}>
+              <img
+                src={project.data.image}
+                alt={project.data.title}
+              />
+            </a>
+
+            <div class="project_info">
+
+              <h3>
+                <a href={`/projects/${project.id}`}>
+                  {project.data.title}
+                </a>
+              </h3>
+
+              <div class="metadata">
+
+                <span class="tag">
+                  {project.data.start === project.data.end
+                    ? project.data.start
+                    : `${project.data.start} – ${project.data.end}`}
+                </span>
+
+                <span class="tag">
+                  {project.data.category}
+                </span>
+
+              </div>
+
+              <p>{project.data.description}</p>
+
+            </div>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </section>
+
+</BaseLayout>

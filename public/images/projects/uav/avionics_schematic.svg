@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img" aria-labelledby="svgtitle svgdesc">
+  <title id="svgtitle">UAV avionics architecture</title>
+  <desc id="svgdesc">Block diagram of the aircraft avionics: RC receiver feeding an Arduino Mega 2560, GPS over UART, four sensors on an I2C bus, servo outputs for elevator and ailerons, SD card over SPI, and direct receiver links to the fan ESC, rudder servo and flap servos that bypass the microcontroller.</desc>
+
+  <defs>
+    <marker id="ah-rule" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7C8B99"/>
+    </marker>
+    <marker id="ah-bypass" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#B4472E"/>
+    </marker>
+    <marker id="ah-compute" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B63A6"/>
+    </marker>
+    <style>
+      .lbl   { font-family: Inter, "Helvetica Neue", Arial, sans-serif; font-size: 13px; fill: #16212B; }
+      .lbl-s { font-family: Inter, "Helvetica Neue", Arial, sans-serif; font-size: 11px; fill: #55636F; }
+      .bus   { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; fill: #55636F; letter-spacing: .06em; }
+      .wire      { fill: none; stroke: #7C8B99; stroke-width: 1.4; }
+      .wire-comp { fill: none; stroke: #5B63A6; stroke-width: 1.4; }
+      .wire-byp  { fill: none; stroke: #B4472E; stroke-width: 2; }
+      .bx-sense  { fill: #E8F1F2; stroke: #4E8A93; stroke-width: 1.4; }
+      .bx-comp   { fill: #E7E9F5; stroke: #5B63A6; stroke-width: 1.4; }
+      .bx-act    { fill: #FBEEE0; stroke: #C88A3E; stroke-width: 1.4; }
+      .bx-neut   { fill: #FFFFFF; stroke: #94A3AE; stroke-width: 1.4; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="600" fill="#FFFFFF"/>
+
+  <polygon points="36,46 184,46 172,92 24,92" class="bx-neut"/>
+  <text x="104" y="69" class="lbl" text-anchor="middle" dominant-baseline="middle">Pilot input</text>
+
+  <rect x="320" y="36" width="180" height="64" rx="4" class="bx-neut"/>
+  <text x="410" y="60" class="lbl" text-anchor="middle" dominant-baseline="middle">RC receiver</text>
+  <text x="410" y="79" class="lbl-s" text-anchor="middle" dominant-baseline="middle">Spektrum AR6210</text>
+
+  <rect x="566" y="16" width="150" height="44" rx="4" class="bx-act"/>
+  <text x="641" y="38" class="lbl" text-anchor="middle" dominant-baseline="middle">Fan ESC</text>
+  <rect x="750" y="16" width="126" height="44" rx="4" class="bx-act"/>
+  <text x="813" y="38" class="lbl" text-anchor="middle" dominant-baseline="middle">Fan motor</text>
+
+  <rect x="566" y="76" width="150" height="44" rx="4" class="bx-act"/>
+  <text x="641" y="98" class="lbl" text-anchor="middle" dominant-baseline="middle">Rudder servo</text>
+
+  <rect x="566" y="136" width="150" height="44" rx="4" class="bx-act"/>
+  <text x="641" y="158" class="lbl" text-anchor="middle" dominant-baseline="middle">Flap servos</text>
+
+  <rect x="320" y="206" width="180" height="240" rx="4" class="bx-comp"/>
+  <text x="410" y="316" class="lbl" text-anchor="middle" dominant-baseline="middle">Arduino Mega 2560</text>
+  <text x="410" y="336" class="lbl-s" text-anchor="middle" dominant-baseline="middle">PID autopilot and logging</text>
+
+  <rect x="566" y="236" width="150" height="44" rx="4" class="bx-act"/>
+  <text x="641" y="258" class="lbl" text-anchor="middle" dominant-baseline="middle">Elevator servo</text>
+
+  <rect x="566" y="320" width="150" height="44" rx="4" class="bx-act"/>
+  <text x="641" y="342" class="lbl" text-anchor="middle" dominant-baseline="middle">Aileron servos</text>
+
+  <rect x="24" y="196" width="170" height="44" rx="4" class="bx-sense"/>
+  <text x="109" y="211" class="lbl" text-anchor="middle" dominant-baseline="middle">GPS receiver</text>
+  <text x="109" y="228" class="lbl-s" text-anchor="middle" dominant-baseline="middle">Adafruit Ultimate GPS</text>
+
+  <rect x="24" y="268" width="170" height="44" rx="4" class="bx-sense"/>
+  <text x="109" y="283" class="lbl" text-anchor="middle" dominant-baseline="middle">Pressure sensor</text>
+  <text x="109" y="300" class="lbl-s" text-anchor="middle" dominant-baseline="middle">BMP085</text>
+
+  <rect x="24" y="326" width="170" height="44" rx="4" class="bx-sense"/>
+  <text x="109" y="341" class="lbl" text-anchor="middle" dominant-baseline="middle">Gyroscope</text>
+  <text x="109" y="358" class="lbl-s" text-anchor="middle" dominant-baseline="middle">L3GD20H</text>
+
+  <rect x="24" y="384" width="170" height="44" rx="4" class="bx-sense"/>
+  <text x="109" y="399" class="lbl" text-anchor="middle" dominant-baseline="middle">Accelerometer</text>
+  <text x="109" y="416" class="lbl-s" text-anchor="middle" dominant-baseline="middle">LSM303DLHC</text>
+
+  <rect x="24" y="442" width="170" height="44" rx="4" class="bx-sense"/>
+  <text x="109" y="457" class="lbl" text-anchor="middle" dominant-baseline="middle">Magnetometer</text>
+  <text x="109" y="474" class="lbl-s" text-anchor="middle" dominant-baseline="middle">LSM303DLHC</text>
+
+  <rect x="224" y="268" width="70" height="218" rx="4" class="bx-neut"/>
+  <text x="259" y="377" class="bus" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 259 377)">I2C BUS</text>
+
+  <rect x="360" y="492" width="100" height="44" rx="4" class="bx-sense"/>
+  <text x="410" y="514" class="lbl" text-anchor="middle" dominant-baseline="middle">SD card</text>
+
+  <path d="M180 68 H314" class="wire" marker-end="url(#ah-rule)"/>
+
+  <path d="M500 52 H533 V38 H560" class="wire-byp" marker-end="url(#ah-bypass)"/>
+  <path d="M716 38 H744" class="wire-byp" marker-end="url(#ah-bypass)"/>
+  <path d="M500 70 H533 V98 H560" class="wire-byp" marker-end="url(#ah-bypass)"/>
+  <path d="M500 86 H533 V158 H560" class="wire-byp" marker-end="url(#ah-bypass)"/>
+
+  <path d="M410 100 V200" class="wire-comp" marker-end="url(#ah-compute)"/>
+  <text x="420" y="152" class="bus" dominant-baseline="middle">PWM</text>
+
+  <path d="M194 218 H314" class="wire" marker-end="url(#ah-rule)"/>
+  <text x="254" y="206" class="bus" text-anchor="middle" dominant-baseline="middle">UART</text>
+  <path d="M194 290 H218" class="wire" marker-end="url(#ah-rule)"/>
+  <path d="M194 348 H218" class="wire" marker-end="url(#ah-rule)"/>
+  <path d="M194 406 H218" class="wire" marker-end="url(#ah-rule)"/>
+  <path d="M194 464 H218" class="wire" marker-end="url(#ah-rule)"/>
+  <path d="M294 377 H314" class="wire" marker-end="url(#ah-rule)"/>
+
+  <path d="M500 258 H560" class="wire-comp" marker-end="url(#ah-compute)"/>
+  <path d="M500 342 H560" class="wire-comp" marker-end="url(#ah-compute)"/>
+  <path d="M410 446 V486" class="wire-comp" marker-end="url(#ah-compute)"/>
+  <text x="420" y="468" class="bus" dominant-baseline="middle">SPI</text>
+
+  <path d="M24 558 H60" class="wire-byp"/>
+  <text x="70" y="558" class="lbl-s" dominant-baseline="middle">Wired straight from the receiver: these channels stay live if the Arduino fails</text>
+  <path d="M24 580 H60" class="wire-comp"/>
+  <text x="70" y="580" class="lbl-s" dominant-baseline="middle">Routed through the flight controller</text>
+</svg>
